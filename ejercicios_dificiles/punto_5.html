@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Punto 5</title>
+</head>
+<body>
+    <h1>Modificar el texto</h1>
+
+    <p id="texto">Este es un texto de prueba.</p>
+
+    <label>Negrita:</label>
+    <select id="negrita" onchange="cambiar()">
+        <option value="normal">No</option>
+        <option value="bold">Si</option>
+    </select>
+
+    <br><br>
+
+    <label>Cursiva:</label>
+    <select id="cursiva" onchange="cambiar()">
+        <option value="normal">No</option>
+        <option value="italic">Si</option>
+    </select>
+
+    <script>
+        function cambiar() {
+            negrita = document.getElementById("negrita").value;
+            cursiva = document.getElementById("cursiva").value;
+
+            texto = document.getElementById("texto");
+            texto.style.fontWeight = negrita;
+            texto.style.fontStyle = cursiva;
+        }
+    </script>
+</body>
+</html>

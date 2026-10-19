@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Punto 4</title>
+</head>
+<body>
+    <h1>Seleccionar una imagen</h1>
+
+    <select id="nombreImagen" onchange="cambiar()">
+        <option value="img/escudoGuanenta.png">Escudo</option>
+        <option value="img/paisaje.jpg">Paisaje</option>
+        <option value="img/flor.jpg">Flor</option>
+    </select>
+
+    <br><br>
+
+    <img id="imagen" src="img/escudoGuanenta.png"
+         alt="Imagen seleccionada" width="250">
+
+    <script>
+        function cambiar() {
+            nombreImagen = document.getElementById("nombreImagen").value;
+            document.getElementById("imagen").src = nombreImagen;
+        }
+    </script>
+</body>
+</html>
